@@ -7,7 +7,7 @@ from alembic import context
 from backend.db.database import Base
 from backend.models.session import Session
 from backend.models.document import Document
-
+from backend.models.artifact import Artifact
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
 config = context.config
