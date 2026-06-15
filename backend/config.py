@@ -40,6 +40,13 @@ class Settings(BaseSettings):
     DB_POOL_SIZE: int = 10
     DB_MAX_OVERFLOW: int = 20
 
+
+    # ── OpenRouter ──────────────────────────────────────────────────────────────
+    OPENROUTER_API_KEY: str = "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"
+    OPENROUTER_MODEL: str = "openai/gpt-oss-120b:free"
+    OPENROUTER_BASE_URL: str = "https://openrouter.ai/api/v1"
+
+
     # ── Upload ─────────────────────────────────────────────────────────────────
     MAX_UPLOAD_SIZE_MB: int = 20
 
@@ -99,3 +106,5 @@ def get_settings() -> Settings:
     Call get_settings.cache_clear() in tests to reset between cases.
     """
     return Settings()
+
+

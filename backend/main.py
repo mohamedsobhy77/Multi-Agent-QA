@@ -31,6 +31,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
 from backend.api.v1.endpoints.upload import router as upload_router
+from backend.api.v1.endpoints.artifacts import router as artifacts_router
 from backend.config import get_settings
 from backend.db.database import engine
 # ── Settings ──────────────────────────────────────────────────────────────────
@@ -162,11 +163,16 @@ def _register_middleware(app: FastAPI) -> None:
 # ── Router registration ───────────────────────────────────────────────────────
 
 def _register_routers(app: FastAPI) -> None:
-    """Mount all versioned API routers."""
     app.include_router(
         upload_router,
         prefix="/api/v1",
         tags=["Documents & Sessions"],
+    )
+
+    app.include_router(
+        artifacts_router,
+        prefix="/api/v1",
+        tags=["Artifacts"],
     )
 
 
