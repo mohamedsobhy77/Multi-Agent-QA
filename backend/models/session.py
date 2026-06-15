@@ -6,10 +6,10 @@ from sqlalchemy import DateTime, String, func
 from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
-from db.database import Base
+from backend.db.database import Base
 
 if TYPE_CHECKING:
-    from models.document import Document
+    from backend.models.document import Document
 
 from enum import Enum
 class SessionStatus(str, Enum):

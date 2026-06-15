@@ -31,16 +31,16 @@ from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from backend.db.database import get_db
-from models.session import Session
-from schemas.document import DocumentSummary, FileType, UploadResponse
-from schemas.session import SessionResponse, SessionStatus
-from services.exceptions import (
+from backend.models.session import Session
+from backend.schemas.document import DocumentSummary, FileType, UploadResponse
+from backend.schemas.session import SessionResponse, SessionStatus
+from backend.services.exceptions import (
     EmptyDocumentError,
     FileTooLargeError,
     TextExtractionError,
     UnsupportedFileTypeError,
 )
-from services.ingest import ingest_document
+from backend.services.ingest import ingest_document
 
 router = APIRouter()
 

@@ -37,10 +37,10 @@ from datetime import datetime, timezone
 from fastapi import UploadFile
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from models.document import Document
-from models.session import Session, SessionStatus
-from schemas.document import DocumentSummary, FileType, UploadResponse
-from services.exceptions import (
+from backend.models.document import Document
+from backend.models.session import Session, SessionStatus
+from backend.schemas.document import DocumentSummary, FileType, UploadResponse
+from backend.services.exceptions import (
     EmptyDocumentError,
     FileTooLargeError,
     TextExtractionError,

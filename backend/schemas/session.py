@@ -180,6 +180,6 @@ class SessionListResponse(_Base):
 # document.py imports SessionStatus from this module; it does NOT import
 # SessionResponse — so the import below is safe.
 
-from schemas.document import DocumentSummary  # noqa: E402
+from backend.schemas.document import DocumentSummary  # noqa: E402
 
 SessionResponse.model_rebuild()

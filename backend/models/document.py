@@ -6,10 +6,10 @@ from sqlalchemy import DateTime, ForeignKey, Index, Integer, String, Text, func
 from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
-from db.database import Base
+from backend.db.database import Base
 
 if TYPE_CHECKING:
-    from models.session import Session
+    from backend.models.session import Session
 
 from enum import Enum
 

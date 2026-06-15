@@ -40,7 +40,7 @@ from typing import Final
 import fitz  # PyMuPDF
 from docx import Document as DocxDocument
 
-from services.exceptions import EmptyDocumentError, TextExtractionError
+from backend.services.exceptions import EmptyDocumentError, TextExtractionError
 
 # ── Constants ─────────────────────────────────────────────────────────────────
 
